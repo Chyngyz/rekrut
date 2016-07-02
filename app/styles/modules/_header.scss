@@ -1,0 +1,182 @@
+.rkrt {
+
+  &__header {
+    width: 100%;
+    position: fixed;
+
+    &__top {
+      height: 53px;
+      background-color: $lightBlack;
+      padding: 12px 0;
+    }
+
+    &__bottom {
+      padding: 40px 0 30px;
+    }
+
+    &--shrink {
+
+    }
+
+
+    &__logo {
+      height: 23px;
+      width: 95px;
+      margin-top: 3px;
+      position: absolute;
+      left: 20px;
+      top: 12px;
+      overflow: hidden;
+      @include transition(all 0.2s ease-in);
+
+
+
+      svg {
+        height: 100%;
+      }
+
+      .rkrt__header--shrink & {
+        width: 15px;
+
+        svg #rekrutsvg {
+
+        }
+      }
+
+    }
+
+    &__appslink {
+      width: 212px;
+      height: 30px;
+      position: absolute;
+      right: 20px;
+      top: 12px;
+
+      a {
+        display: inline-block;
+        vertical-align: middle;
+
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &__search {
+
+      &-advanced-link {
+        display: inline-block;
+        font-size: 10px;
+        line-height: 1;
+        height: 10px;
+        color: $yellow;
+        margin-left: 20px;
+        cursor: pointer;
+
+        svg {
+          height: 90%;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  &__search-form {
+
+
+    &__input {
+      display: inline-block;
+      vertical-align: middle;
+      width: 535px;
+      position: relative;
+
+      .form-control {
+        height: 29px;
+        font-size: 12px;
+        padding: 6px 25px 6px 12px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: url('../images/magnifier.svg') center no-repeat;
+        background-size: 100%;
+        top: 50%;
+        right: 10px;
+        @include transform(translateY(-50%));
+      }
+    }
+
+
+
+    .btn-danger {
+      margin-left: 10px;
+      height: 29px;
+      padding: 7px 20px;
+      line-height: 1;
+      border: 1px solid $red;
+    }
+  }
+
+  &__search-advanced {
+
+    &__input {
+      position: relative;
+
+      .form-control {
+        font-size: 12px;
+        padding: 6px 25px 6px 12px;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: url('../images/magnifier.svg') center no-repeat;
+        background-size: 100%;
+        top: 50%;
+        right: 10px;
+        @include transform(translateY(-50%));
+      }
+    }
+
+    &__meta {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 12px;
+    }
+
+    &__range {
+      display: inline-block;
+      vertical-align: middle;
+      width: 60px;
+      margin-left: 10px;
+
+      &.lg {
+        width: 70px;
+      }
+    }
+
+    &__slider {
+      display: inline-block;
+      vertical-align: middle;
+      width: 400px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    &__submit {
+      width: 100%;
+    }
+
+    .rkrt__checkbox {
+      margin-left: 20px;
+    }
+
+
+  }
+
+}
