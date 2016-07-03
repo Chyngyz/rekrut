@@ -3,6 +3,7 @@
   &__header {
     width: 100%;
     position: fixed;
+    z-index: 20;
 
     &__top {
       height: 53px;
@@ -12,6 +13,7 @@
 
     &__bottom {
       padding: 40px 0 30px;
+      background-color: #fff;
     }
 
     &--shrink {
@@ -55,9 +57,14 @@
       a {
         display: inline-block;
         vertical-align: middle;
+        width: 99px;
 
         &:first-child {
           margin-right: 10px;
+        }
+
+        img {
+          width: 100%;
         }
       }
     }

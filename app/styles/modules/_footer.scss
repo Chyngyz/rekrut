@@ -1,0 +1,87 @@
+.rkrt {
+  &__footer {
+    background-color: #fff;
+
+    &__tophr {
+      margin-top: 5px;
+      margin-bottom: 35px;
+      border-top: 1px solid #d3d3d3;
+    }
+
+    &__copy {
+      font-size: 11px;
+      color: $text;
+    }
+
+    &__nav {
+      ul {
+        list-style: none;
+        font-size: 11px;
+        line-height: 24px;
+        margin: 0;
+        padding: 0;
+
+        a {
+          color: $black;
+        }
+      }
+    }
+
+    &__appslink {
+      margin-bottom: 20px;
+      @include display(flex);
+      @include justify-content(space-between);
+      @include flex-flow(row nowrap);
+
+      a {
+        display: inline-block;
+        width: 140px;
+        height: 40px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    &__links {
+      width: 290px;
+      max-width: 290px;
+      float: right;
+
+      @include MQM(XS) {
+        width: 100%;
+        max-width: 100%;
+        float: none;
+      }
+    }
+
+    &__social {
+      text-align: left;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          display: inline-block;
+          margin-right: 20px;
+        }
+
+      }
+
+      &-link {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

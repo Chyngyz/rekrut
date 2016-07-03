@@ -5,6 +5,7 @@ $red: #ff3c43;
 $lightBlack: #1e1e1e;
 $text: #606060;
 $gray: #b4b4b4;
+$lightGray: #f6f6f6;
 $black: #101010;
 
 
@@ -17,4 +18,23 @@ $i: 10;
     margin-bottom: $i + px;
   }
   $i: $i + 10;
+}
+
+
+// Sticky footer
+
+html, body {
+  height: 100%;
+}
+.rkrt__main {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -170px;
+}
+.rkrt__main:after {
+  content: "";
+  display: block;
+}
+.rkrt__footer, .rkrt__main:after {
+  height: 170px;
 }

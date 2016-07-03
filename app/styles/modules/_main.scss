@@ -1,0 +1,15 @@
+.rkrt {
+
+  &__main {
+
+    &--shrink {
+      padding-top: 230px;
+    }
+
+    &__tophr {
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border-top: 1px solid #d3d3d3;
+    }
+  }
+}

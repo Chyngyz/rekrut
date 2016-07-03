@@ -1,0 +1,59 @@
+.rkrt {
+  &__vacancylist {
+    padding-top: 10px;
+  }
+
+  &__vacancy-card {
+    display: block;
+    height: 170px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid;
+    background-color: #fff;
+    border-color: transparent;
+    @include transition(border-color 0.1s ease-in);
+
+    &:hover, &:focus, &:active {
+      text-decoration: none;
+      border-color: $red;
+    }
+
+    &--featured {
+      background-color: $lightGray;
+    }
+
+    &__cat {
+      display: block;
+      font-size: 11px;
+      color: $red;
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      display: block;
+      font-size: 14px;
+      font-weight: bold;
+      color: $black;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    &__intro {
+      display: block;
+      font-size: 11px;
+      color: $text;
+      line-height: 18px;
+      margin-bottom: 20px;
+      height: 36px;
+    }
+
+    &__salary {
+      display: block;
+      font-size: 11px;
+      color: $gray;
+      line-height: 1;
+      font-style: italic;
+    }
+  }
+}
