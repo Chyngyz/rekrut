@@ -4,12 +4,108 @@
 
     &--shrink {
       padding-top: 230px;
+
+      @include MQM(SM) {
+        padding-top: 53px;
+      }
     }
 
     &__tophr {
       margin-top: 5px;
       margin-bottom: 20px;
       border-top: 1px solid #d3d3d3;
+      display: none;
+
+      .rkrt__main--shrink & {
+        display: block;
+      }
+
+      @include MQM(SM) {
+        display: none;
+      }
+    }
+
+    &__search {
+      display: none;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      .rkrt__search-form__input {
+        width: 100%;
+
+        .form-control {
+          height: 36px;
+        }
+      }
+
+      .rkrt__search-advanced__slider {
+        margin-bottom: 15px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .rkrt__search-advanced__range {
+        @include MQM(XS) {
+          margin-left: 3px;
+        }
+      }
+
+      .rkrt__search-advanced__flex {
+        display: inline-block;
+
+        & > span {
+          margin-right: 15px;
+
+          @include MQM(XS) {
+            margin-right: 0;
+          }
+        }
+
+        @include MQM(XS) {
+          @include display(flex);
+          @include justify-content(space-between);
+          @include flex-flow(row no-wrap);
+          @include align-items(center);
+        }
+      }
+
+
+      .rkrt__search-advanced__title {
+        display: inline-block;
+        font-size: 12px;
+        vertical-align: middle;
+
+        @include MQM(XS) {
+          display: block;
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .rkrt__search-advanced__slider {
+        width: 100%;
+      }
+
+      .btn {
+        height: 36px;
+        line-height: 25px;
+        display: block;
+
+        @include MQM(XS) {
+          margin-top: 15px;
+        }
+      }
+
+      .btn-warning {
+        svg {
+          height: 10px;
+          vertical-align: middle;
+        }
+      }
+
+      @include MQM(SM) {
+        display: block;
+      }
     }
   }
 }
